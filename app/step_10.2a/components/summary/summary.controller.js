@@ -9,10 +9,6 @@
 
 		ctrl.getText = getText;
 
-		$scope.$watch("ctrl.visible", function(newVal) {
-			ctrl.visible = newVal;
-		});
-
 		function getText(lang) {
 			if (lang === "en") {
 				return "English!";
