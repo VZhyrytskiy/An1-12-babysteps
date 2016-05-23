@@ -12,10 +12,6 @@
 
 		ctrl.getTaskHeader();
 
-		$scope.$watch("ctrl.visible", function(newVal) {
-			ctrl.visible = newVal;
-		});
-
 		// mainCtrl property ($scope access)
 		function getTaskHeader() {
 			console.log($scope.mainCtrl.taskHeader);
