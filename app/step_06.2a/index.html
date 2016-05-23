@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Step 06.2: Wrap Markup in Component Directive (with transclude)</title>
+</head>
+<body>
+	<page-header></page-header>
+
+	<div ng-controller="SomeMainCtrl as mainCtrl">
+		<!-- ... -->
+		<div ng-controller="TaskListCtrl as ctrl">
+			<h3>Tasks</h3>
+			<ul>
+				<li ng-repeat="task in ctrl.tasks">
+					<h4>{{mainCtrl.taskHeader}}</h4>
+					{{task.action}}
+				</li>
+			</ul>
+		</div>
+	<div>
+
+	<script src="./../vendor/angular/angular.min.js"></script>
+	
+	<script src="app.js"></script>
+	<script src="some-main.controller.js"></script>
+	<script src="task-list.controller.js"></script>
+	<script src="components/components.module.js"></script>
+	<script src="components/page-header/page-header.directive.js"></script>
+	<script src="components/page-header/page-header.controller.js"></script>
+	<script src="components/navigation/navigation.directive.js"></script>
+	<script src="components/navigation/navigation.controller.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

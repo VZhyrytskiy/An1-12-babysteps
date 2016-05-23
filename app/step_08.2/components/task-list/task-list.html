@@ -1,0 +1,12 @@
+<div>
+	<h3>Tasks</h3>
+	<ul>
+		<li ng-repeat="task in ctrl.tasks">
+			<ng-transclude></ng-transclude>
+			{{task.action}} - {{task.done}}
+			<button ng-click="ctrl.completeTask(task)" ng-disabled="task.done">
+				Complete
+			</button>
+		</li>
+	</ul>
+</div>

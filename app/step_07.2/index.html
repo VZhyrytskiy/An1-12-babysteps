@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="app" >
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Step 07.2: Replace External Reference with Bound Input ($watch Expression)</title>
+</head>
+<body>
+	<page-header></page-header>
+
+	<div ng-controller="SomeMainCtrl as mainCtrl">
+		<!-- ... -->
+		<task-list>
+			<h4>{{mainCtrl.taskHeader}}</h4>
+		</task-list>
+
+		Visible: <input type="checkbox" ng-model="mainCtrl.visible">
+		<div ng-controller="SummaryCtrl as ctrl" ng-show="ctrl.visible">
+			<p>
+			{{ctrl.getText(mainCtrl.getLanguage())}}
+			</p>
+		</div>
+	<div>
+
+	<script src="./../vendor/angular/angular.min.js"></script>
+	
+	<script src="app.js"></script>
+	<script src="some-main.controller.js"></script>
+	<script src="summary.controller.js"></script>
+	<script src="components/components.module.js"></script>
+	<script src="components/page-header/page-header.directive.js"></script>
+	<script src="components/page-header/page-header.controller.js"></script>
+	<script src="components/navigation/navigation.directive.js"></script>
+	<script src="components/navigation/navigation.controller.js"></script>
+	<script src="components/task-list/task-list.controller.js"></script>
+	<script src="components/task-list/task-list.directive.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

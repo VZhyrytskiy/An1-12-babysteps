@@ -1,0 +1,19 @@
+<page-header></page-header>
+
+<div>
+	<!-- ... -->
+	<task-list
+		tasks="ctrl.tasks"
+		on-complete="ctrl.completeTask(task)"
+		on-delete="ctrl.deleteTask(task)"
+		on-save="ctrl.saveTask(task)">
+		<h4>{{ctrl.taskHeader}}</h4>
+	</task-list>
+
+	Visible: <input type="checkbox" ng-model="ctrl.visible">
+	<summary 
+		visible="ctrl.visible"
+		language="ctrl.getLanguage()"
+		on-calc="ctrl.calculateSmth()">
+	</summary>
+<div>

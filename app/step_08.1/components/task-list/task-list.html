@@ -1,0 +1,9 @@
+<div>
+	<h3>Tasks</h3>
+	<ul>
+		<li ng-repeat="task in ctrl.tasks">
+			<ng-transclude></ng-transclude>
+			{{task.action}}
+		</li>
+	</ul>
+</div>
