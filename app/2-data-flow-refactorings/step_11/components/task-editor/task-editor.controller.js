@@ -3,16 +3,16 @@
 
 	angular
 		.module("components")
-		.controller("TaskEditorCtrl", TaskEditorCtrl);
+		.controller("TaskEditor", TaskEditor);
 
-	function TaskEditorCtrl() {
-		var ctrl = this;
+	function TaskEditor() {
+		let $ctrl = this;
 
-		ctrl.save = save;
-		ctrl.task = angular.copy(ctrl.inputTask);
+		$ctrl.save = save;
+		$ctrl.task = angular.copy($ctrl.inputTask);
 
 		function save() {
-			ctrl.onSave({newTask: ctrl.task, oldTask: ctrl.inputTask});
+			$ctrl.onSave({newTask: $ctrl.task, oldTask: $ctrl.inputTask});
 		}
 	}
 

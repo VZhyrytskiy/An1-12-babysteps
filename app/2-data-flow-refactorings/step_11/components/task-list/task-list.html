@@ -1,22 +1,22 @@
 <div>
 	<h3>Tasks</h3>
 	<ul>
-		<li ng-repeat="task in ctrl.tasks">
+		<li ng-repeat="task in $ctrl.tasks">
 			<ng-transclude></ng-transclude>
 			{{task.action}} - {{task.done}}
-			<button ng-click="ctrl.onComplete({task: task})" ng-disabled="task.done">
+			<button ng-click="$ctrl.onComplete({task: task})" ng-disabled="task.done">
 				Complete
 			</button>
-			<button ng-click="ctrl.deleteTask(task)">
+			<button ng-click="$ctrl.deleteTask(task)">
 				Delete
 			</button>
-			<button ng-click="ctrl.toggleEditMode(task)">
+			<button ng-click="$ctrl.toggleEditMode(task)">
 				Edit
 			</button>
 			<task-editor 
 				ng-show="task.isEditMode"
 				task="task"
-				on-save="ctrl.save(newTask, task)">
+				on-save="$ctrl.save(newTask, task)">
 			</task-editor>
 		</li>
 	</ul>

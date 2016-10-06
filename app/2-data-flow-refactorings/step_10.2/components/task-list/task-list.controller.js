@@ -3,17 +3,17 @@
 
 	angular
 		.module("components")
-		.controller("TaskListCtrl", TaskListCtrl);
+		.controller("TaskList", TaskList);
 
-	function TaskListCtrl() {
-		var ctrl = this;
+	function TaskList() {
+		let $ctrl = this;
 
-		ctrl.deleteTask = deleteTask;
-		ctrl.toggleEditMode = toggleEditMode;
-		ctrl.save = save;
+		$ctrl.deleteTask = deleteTask;
+		$ctrl.toggleEditMode = toggleEditMode;
+		$ctrl.save = save;
 
 		function deleteTask(task) {
-			ctrl.onDelete({task: task});
+			$ctrl.onDelete({task: task});
 		}
 
 		function save(task) {

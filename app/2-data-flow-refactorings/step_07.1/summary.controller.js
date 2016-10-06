@@ -2,12 +2,12 @@
 	'use strict';
 
 	angular.module("app")
-		.controller("SummaryCtrl", SummaryCtrl);
+		.controller("Summary", Summary);
 
-	function SummaryCtrl() {
-		var ctrl = this;
+	function Summary() {
+		let $ctrl = this;
 
-		ctrl.getText = getText;
+		$ctrl.getText = getText;
 
 		function getText(lang) {
 			if (lang === "en") {

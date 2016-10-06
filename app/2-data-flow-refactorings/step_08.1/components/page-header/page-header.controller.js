@@ -3,12 +3,12 @@
 
 	angular
 		.module("components")
-		.controller("HeaderCtrl", HeaderCtrl);
+		.controller("Header", Header);
 
-	function HeaderCtrl() {
-		var ctrl = this;
+	function Header() {
+		let $ctrl = this;
 
-		ctrl.getText = getText;
+		$ctrl.getText = getText;
 
 		function getText() {
 			return "Hello World!";

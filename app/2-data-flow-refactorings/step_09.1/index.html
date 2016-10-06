@@ -4,29 +4,29 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Step 09: Isolate Component</title>
+	<title>Step 09.1: Isolate Component</title>
 </head>
 <body>
 	<page-header></page-header>
 
-	<div ng-controller="SomeMainCtrl as mainCtrl">
+	<div ng-controller="Main as $mainCtrl">
 		<!-- ... -->
 		<task-list
-			on-complete="mainCtrl.completeTask(task)">
-			<h4>{{mainCtrl.taskHeader}}</h4>
+			on-complete="$mainCtrl.completeTask(task)">
+			<h4>{{$mainCtrl.taskHeader}}</h4>
 		</task-list>
 
-		Visible: <input type="checkbox" ng-model="mainCtrl.visible">
+		Visible: <input type="checkbox" ng-model="$mainCtrl.visible">
 		<summary 
-			visible="mainCtrl.visible"
-			language="mainCtrl.getLanguage()">
+			visible="$mainCtrl.visible"
+			language="$mainCtrl.getLanguage()">
 		</summary>
 	<div>
 
 	<script src="./../../vendor/angular/angular.min.js"></script>
 	
 	<script src="app.js"></script>
-	<script src="some-main.controller.js"></script>
+	<script src="main.controller.js"></script>
 	<script src="components/components.module.js"></script>
 	<script src="components/page-header/page-header.directive.js"></script>
 	<script src="components/page-header/page-header.controller.js"></script>

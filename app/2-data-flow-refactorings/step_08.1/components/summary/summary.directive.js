@@ -8,8 +8,8 @@
 	function summary() {
 		return {
 			scope: true,
-			controller: "SummaryCtrl",
-			controllerAs: "ctrl",
+			controller: "Summary",
+			controllerAs: "$ctrl",
 			bindToController: {
 				visible: "=",
 				language: "="

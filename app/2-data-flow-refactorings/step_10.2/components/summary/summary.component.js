@@ -3,20 +3,14 @@
 
 	angular
 		.module("components")
-		.directive("summary", summary);
-
-	function summary() {
-		return {
-			scope: {},
-			controller: "SummaryCtrl",
-			controllerAs: "ctrl",
-			bindToController: {
+		.component("summary", {
+			controller: "Summary",
+			bindings: {
 				visible: "=",
 				language: "=",
 				onCalc: "&"
 			},
 			templateUrl: "components/summary/summary.html"
-		};
-	}
+		});
 
 })();

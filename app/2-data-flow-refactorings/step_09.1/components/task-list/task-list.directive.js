@@ -8,9 +8,9 @@
 	function taskList() {
 		return {
 			scope: true,
-			transclude: true, // +
-			controller: "TaskListCtrl",
-			controllerAs: "ctrl",
+			transclude: true,
+			controller: "TaskList",
+			controllerAs: "$ctrl",
 			bindToController: {
 				onComplete: "&"
 			},

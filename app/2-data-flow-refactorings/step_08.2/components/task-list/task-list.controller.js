@@ -3,21 +3,21 @@
 
 	angular
 		.module("components")
-		.controller("TaskListCtrl", TaskListCtrl);
+		.controller("TaskList", TaskList);
 
-	function TaskListCtrl($scope) {
-		var ctrl = this;
+	function TaskList($scope) {
+		let $ctrl = this;
 
-		ctrl.tasks = [
+		$ctrl.tasks = [
 			{ action: "Create...", done: true },
 			{ action: "Update...", done: true },
 			{ action: "Delete...", done: false }
 		];
 
-		ctrl.completeTask = completeTask;
+		$ctrl.completeTask = completeTask;
 
 		function completeTask(task) {
-			$scope.mainCtrl.completeTask(task);
+			$scope.$mainCtrl.completeTask(task);
 		}
 
 	}

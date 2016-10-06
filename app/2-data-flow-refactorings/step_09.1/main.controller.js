@@ -2,16 +2,16 @@
 	'use strict';
 
 	angular.module("app")
-		.controller("SomeMainCtrl", SomeMainCtrl);
+		.controller("Main", Main);
 
-	function SomeMainCtrl() {
-		var ctrl = this;
+	function Main() {
+		let $ctrl = this;
 
-		ctrl.taskHeader = "Some task header";
-		ctrl.visible = true;
-		ctrl.calculateSmth = calculateSmth;
-		ctrl.completeTask = completeTask;
-		ctrl.getLanguage = getLanguage;
+		$ctrl.taskHeader = "Some task header";
+		$ctrl.visible = true;
+		$ctrl.calculateSmth = calculateSmth;
+		$ctrl.completeTask = completeTask;
+		$ctrl.getLanguage = getLanguage;
 
 		
 		function calculateSmth() {

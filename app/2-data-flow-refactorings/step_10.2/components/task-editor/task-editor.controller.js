@@ -3,16 +3,16 @@
 
 	angular
 		.module("components")
-		.controller("TaskEditorCtrl", TaskEditorCtrl);
+		.controller("TaskEditor", TaskEditor);
 
-	function TaskEditorCtrl() {
-		var ctrl = this;
+	function TaskEditor() {
+		let $ctrl = this;
 
-		ctrl.save = save;
+		$ctrl.save = save;
 
 		function save(task) {
 			task.isEditMode = false;
-			ctrl.onSave({task: ctrl.task});
+			$ctrl.onSave({task: $ctrl.task});
 		}
 	}
 

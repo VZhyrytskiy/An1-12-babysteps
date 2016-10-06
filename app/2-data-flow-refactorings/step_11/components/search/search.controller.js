@@ -2,9 +2,9 @@
 	'use strict';
 
 	angular.module("app")
-		.controller("SearchCtrl", SearchCtrl);
+		.controller("Search", Search);
 
-	function SearchCtrl() {
+	function Search() {
 		
 	}
 

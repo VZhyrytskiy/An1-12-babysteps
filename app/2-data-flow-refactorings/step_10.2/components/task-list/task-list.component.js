@@ -3,22 +3,16 @@
 
 	angular
 		.module("components")
-		.directive("taskList", taskList);
-
-	function taskList() {
-		return {
-			scope: {},
-			transclude: true, // +
-			controller: "TaskListCtrl",
-			controllerAs: "ctrl",
-			bindToController: {
+		.component("taskList", {
+			transclude: true,
+			controller: "TaskList",
+			bindings: {
 				tasks: "=",
 				onComplete: "&",
 				onDelete: "&",
 				onSave: "&"
 			},
 			templateUrl: "components/task-list/task-list.html"
-		};
-	}
+		});
 
 })();

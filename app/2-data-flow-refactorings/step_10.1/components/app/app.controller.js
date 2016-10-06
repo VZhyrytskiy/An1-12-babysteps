@@ -2,22 +2,22 @@
 	'use strict';
 
 	angular.module("components")
-		.controller("SomeMainCtrl", SomeMainCtrl);
+		.controller("App", App);
 
-	function SomeMainCtrl() {
-		var ctrl = this;
+	function App() {
+		let $ctrl = this;
 
-		ctrl.taskHeader = "Some task header";
-		ctrl.visible = true;
-		ctrl.tasks = [
+		$ctrl.taskHeader = "Some task header";
+		$ctrl.visible = true;
+		$ctrl.tasks = [
 			{ action: "Create...", done: true },
 			{ action: "Update...", done: true },
 			{ action: "Delete...", done: false }
 		];
 
-		ctrl.calculateSmth = calculateSmth;
-		ctrl.completeTask = completeTask;
-		ctrl.getLanguage = getLanguage;
+		$ctrl.calculateSmth = calculateSmth;
+		$ctrl.completeTask = completeTask;
+		$ctrl.getLanguage = getLanguage;
 
 
 		

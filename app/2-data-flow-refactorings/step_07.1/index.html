@@ -9,16 +9,16 @@
 <body>
 	<page-header></page-header>
 
-	<div ng-controller="SomeMainCtrl as mainCtrl">
+	<div ng-controller="Main as $mainCtrl">
 		<!-- ... -->
 		<task-list>
-			<h4>{{mainCtrl.taskHeader}}</h4>
+			<h4>{{$mainCtrl.taskHeader}}</h4>
 		</task-list>
 
 		<!-- two external references -->
-		<div ng-show="mainCtrl.isSummaryVisible()">
-			<p ng-controller="SummaryCtrl as ctrl">
-			{{ctrl.getText(mainCtrl.getLanguage())}}
+		<div ng-show="$mainCtrl.isSummaryVisible()">
+			<p ng-controller="Summary as $ctrl">
+			{{$ctrl.getText($mainCtrl.getLanguage())}}
 			</p>
 		</div>
 	<div>
@@ -26,7 +26,7 @@
 	<script src="./../../vendor/angular/angular.min.js"></script>
 	
 	<script src="app.js"></script>
-	<script src="some-main.controller.js"></script>
+	<script src="main.controller.js"></script>
 	<script src="summary.controller.js"></script>
 	<script src="components/components.module.js"></script>
 	<script src="components/page-header/page-header.directive.js"></script>

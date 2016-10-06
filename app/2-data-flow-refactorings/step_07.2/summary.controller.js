@@ -2,17 +2,17 @@
 	'use strict';
 
 	angular.module("app")
-		.controller("SummaryCtrl", SummaryCtrl);
+		.controller("Summary", Summary);
 
-	function SummaryCtrl($scope) {
-		var ctrl = this;
+	function Summary($scope) {
+		let $ctrl = this;
 
-		ctrl.visible = true;
-		ctrl.getText = getText;
+		$ctrl.visible = true;
+		$ctrl.getText = getText;
 
-		$scope.$watch("mainCtrl.visible", function(newVal) {
+		$scope.$watch("$mainCtrl.visible", function(newVal) {
 			console.log(newVal);
-			ctrl.visible = newVal;
+			$ctrl.visible = newVal;
 		});
 
 		function getText(lang) {

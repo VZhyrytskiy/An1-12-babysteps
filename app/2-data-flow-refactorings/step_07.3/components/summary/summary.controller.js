@@ -2,20 +2,20 @@
 	'use strict';
 
 	angular.module("app")
-		.controller("SummaryCtrl", SummaryCtrl);
+		.controller("Summary", Summary);
 
-	function SummaryCtrl($scope) {
-		var ctrl = this;
+	function Summary($scope) {
+		let $ctrl = this;
 
-		ctrl.getText = getText;
-		ctrl.getTaskHeader = getTaskHeader; 
+		$ctrl.getText = getText;
+		$ctrl.getTaskHeader = getTaskHeader; 
 
-		ctrl.getTaskHeader();
+		$ctrl.getTaskHeader();
 
 		// mainCtrl property ($scope access)
 		function getTaskHeader() {
-			console.log($scope.mainCtrl.taskHeader);
-			return $scope.mainCtrl.taskHeader
+			console.log($scope.$mainCtrl.taskHeader);
+			return $scope.$mainCtrl.taskHeader
 		}
 
 		function getText(lang) {
