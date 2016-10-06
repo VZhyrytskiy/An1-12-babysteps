@@ -3,12 +3,12 @@
 
 	angular
 		.module("app")
-		.controller("TaskListCtrl", TaskListCtrl);
+		.controller("TaskList", TaskList);
 
-	function TaskListCtrl() {
-		var ctrl = this;
+	function TaskList() {
+		let $ctrl = this;
 
-		ctrl.tasks = [
+		$ctrl.tasks = [
 			{ action: "Create...", done: true },
 			{ action: "Update...", done: true },
 			{ action: "Delete...", done: false }

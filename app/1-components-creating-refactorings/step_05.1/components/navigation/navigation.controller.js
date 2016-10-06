@@ -2,12 +2,12 @@
 	'use strict';
 
 	angular.module("components")
-		.controller("NavigationCtrl", NavigationCtrl);
+		.controller("Navigation", Navigation);
 
-	function NavigationCtrl() {
-		var ctrl = this;
+	function Navigation() {
+		let $ctrl = this;
 
-		ctrl.getText = getText;
+		$ctrl.getText = getText;
 
 		function getText() {
 			return "Navigation Bar";

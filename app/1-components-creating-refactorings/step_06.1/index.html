@@ -9,10 +9,10 @@
 <body>
 	<page-header></page-header>
 
-	<div ng-controller="TaskListCtrl as ctrl">
+	<div ng-controller="TaskList as $ctrl">
 		<h3>Tasks</h3>
 		<ul>
-			<li ng-repeat="task in ctrl.tasks">{{task.action}}</li>
+			<li ng-repeat="task in $ctrl.tasks">{{task.action}}</li>
 		</ul>
 	</div>
 

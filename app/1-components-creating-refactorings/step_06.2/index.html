@@ -9,13 +9,13 @@
 <body>
 	<page-header></page-header>
 
-	<div ng-controller="SomeMainCtrl as mainCtrl">
+	<div ng-controller="Main as $mainCtrl">
 		<!-- ... -->
-		<div ng-controller="TaskListCtrl as ctrl">
+		<div ng-controller="TaskList as $ctrl">
 			<h3>Tasks</h3>
 			<ul>
-				<li ng-repeat="task in ctrl.tasks">
-					<h4>{{mainCtrl.taskHeader}}</h4>
+				<li ng-repeat="task in $ctrl.tasks">
+					<h4>{{$mainCtrl.taskHeader}}</h4>
 					{{task.action}}
 				</li>
 			</ul>
@@ -25,7 +25,7 @@
 	<script src="./../../vendor/angular/angular.min.js"></script>
 	
 	<script src="app.js"></script>
-	<script src="some-main.controller.js"></script>
+	<script src="main.controller.js"></script>
 	<script src="task-list.controller.js"></script>
 	<script src="components/components.module.js"></script>
 	<script src="components/page-header/page-header.directive.js"></script>

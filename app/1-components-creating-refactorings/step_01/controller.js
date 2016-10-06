@@ -2,9 +2,9 @@
 	'use strict';
 
 	angular.module("app")
-		.controller("HeaderCtrl", HeaderCtrl);
+		.controller("Header", Header);
 
-	function HeaderCtrl($scope) {
+	function Header($scope) {
 		$scope.getText = getText;
 
 		function getText() {

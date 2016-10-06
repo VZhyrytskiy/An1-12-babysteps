@@ -8,8 +8,8 @@
 	function navigation() {
 		return {
 			scope: true,
-			controller: "NavigationCtrl",
-			controllerAs: "navCtrl"
+			controller: "Navigation",
+			controllerAs: "$navCtrl"
 		};
 	}
 
