@@ -9,7 +9,9 @@
 		return {
 			scope: true,
 			controller: "Navigation",
-			controllerAs: "$navCtrl"
+			controllerAs: "$navCtrl",
+			transclude: true,
+			templateUrl: "components/navigation/navigation.html"
 		};
 	}
 
