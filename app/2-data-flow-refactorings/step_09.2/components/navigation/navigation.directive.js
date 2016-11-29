@@ -7,7 +7,7 @@
 
 	function navigation() {
 		return {
-			scope: true,
+			scope: {},
 			controller: "Navigation",
 			controllerAs: "$navCtrl",
 			transclude: true,

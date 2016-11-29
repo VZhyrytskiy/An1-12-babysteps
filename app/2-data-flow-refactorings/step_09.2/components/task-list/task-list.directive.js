@@ -7,7 +7,7 @@
 
 	function taskList() {
 		return {
-			scope: true,
+			scope: {},
 			transclude: true,
 			controller: "TaskList",
 			controllerAs: "$ctrl",

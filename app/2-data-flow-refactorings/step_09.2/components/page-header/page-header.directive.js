@@ -7,7 +7,7 @@
 
 	function pageHeader() {
 		return {
-			scope: true,
+			scope: {},
 			controller: "Header",
 			controllerAs: "$ctrl",
 			templateUrl: "components/page-header/page-header.html"

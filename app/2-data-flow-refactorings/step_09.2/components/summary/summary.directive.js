@@ -7,12 +7,13 @@
 
 	function summary() {
 		return {
-			scope: true,
+			scope: {},
 			controller: "Summary",
 			controllerAs: "$ctrl",
 			bindToController: {
 				visible: "=",
-				language: "="
+				language: "=",
+				onCalc: "&"
 			},
 			templateUrl: "components/summary/summary.html"
 		};

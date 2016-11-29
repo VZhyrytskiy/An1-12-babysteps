@@ -1,10 +1,10 @@
 (function() {
 	'use strict';
 
-	angular.module("app")
-		.controller("Main", Main);
+	angular.module("components")
+		.controller("App", App);
 
-	function Main() {
+	function App() {
 		let $ctrl = this;
 
 		$ctrl.taskHeader = "Some task header";
